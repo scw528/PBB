@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './components/Views/home.vue';
+import About from './components/Views/about.vue';
 import Calendar from './components/Classes/calendar';
 import Melt from './components/Views/melt.vue';
 import Yoga from './components/Views/yoga.vue';
@@ -20,6 +21,11 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: About,
     },
     {
       path: '/calendar',

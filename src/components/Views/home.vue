@@ -3,20 +3,21 @@
     <v-row class="fill-width" align="center">
       <v-img
         :aspect-ratio="16/9"
-        src="../../assets/PBB_Banner.png"
+        src="../../assets/lisa_melt.jpg"
         height="700px"
         class="mb-6"
+        gradient="to top right, rgba(100,115,201,.33), rgba(46, 64, 87,0.3)"
       >
         <v-container class="fill-height">
-          <v-col class="text-center mb-2">
-            <h1>LIVING LIFE FULLY • ACTIVE • PAIN FREE </h1>
-          </v-col>
+          <v-row justify="center" class="mt-12">
+            <v-btn outlined color="white"><strong>Start Your Journey</strong></v-btn>
+          </v-row>
 
         </v-container>
       </v-img>
     </v-row>
   
-    <v-row class="fill-height mt-4 mx-auto" align="center">
+    <v-row class="fill-height mt-4 mx-5" align="center">
       <v-col class="mx-auto" :lg="7" :sm="12">
         <h2 class="text-center my-3">ABOUT LISA</h2>
         <p class="text-left">Lisa has been practicing Yoga since 1994, and initially began her practice as an outlet to deal with stress. However, Lisa quickly experienced that Yoga offered more as it opened her eyes to lifelong learning about the workings of the inner body and how it's subtleties affect mind/body balance. 

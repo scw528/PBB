@@ -29,7 +29,31 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar flat app extended>
+    <v-row full-width contain align-content="center" class="mb-1">
+        <v-img src="./assets/pbb_appbar.png" style="height: inherit"></v-img>
+        <v-img contain src="./assets/logo_tagline.png" height="12vh" class="mt-n10 mb-2"></v-img>
+    </v-row>
+    <v-divider></v-divider>
+    <v-toolbar
+      flat
+      dense
+    >
+      <v-toolbar-items class="mx-auto">
+        <v-btn
+          width="14vw"
+          text
+          v-for="item in menuItems"
+          :key="item.title"
+          v-bind:to="item.link"
+        >
+          {{ item.title }}
+        </v-btn>
+      </v-toolbar-items>
+
+    </v-toolbar>
+
+
+    <!-- <v-app-bar flat app extended>
       
       <v-app-bar-nav-icon class="mt-12 hidden-md-and-up" @click="drawer = !drawer"></v-app-bar-nav-icon>
 
@@ -59,7 +83,7 @@
             </v-col>
         </v-row>
       </v-container>
-    </v-app-bar>
+    </v-app-bar> -->
      
     <v-content>
         <router-view/>
@@ -130,6 +154,7 @@ export default {
         drawer: null,
         menuItems: [
           { title: 'Home', icon: 'dashboard', link: '/' },
+          { title: 'About', icon: 'person', link: '/about' },
           { title: 'Classes', icon: 'calendar_today', link: '/calendar' },
           { title: 'Melt', icon: 'airline_seat_flat', link: '/melt' },
           { title: 'Yoga', icon: 'accessibility_new', link: '/yoga' },
@@ -162,10 +187,5 @@ export default {
   #app {
     font-family: "Aqua";
   }
-
-  .v-btn:hover:before {
-    background-color: transparent;
-  }
-
 
 </style>
