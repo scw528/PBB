@@ -3,10 +3,10 @@
     <v-col>
       <v-sheet height="64">
         <v-toolbar flat color="white">
-          <v-btn v-if="userIsAuthenticated" color="primary" dark @click.stop="dialog = true" class="mr-1">
+          <v-btn v-if="userIsAuthenticated" color="#0e7e8f" dark @click.stop="dialog = true" class="mr-1">
             New Event
           </v-btn>
-          <v-btn outlined class="mr-4" @click="setToday">
+          <v-btn outlined class="mr-4" color="#0e7e8f" @click="setToday">
             Today
           </v-btn>
           <v-btn fab text small @click="prev">
@@ -22,6 +22,7 @@
               <v-btn
                 outlined
                 v-on="on"
+                color="#0e7e8f"
               >
                 <span>{{ typeToLabel[type] }}</span>
                 <v-icon right>arrow_drop_down</v-icon>
@@ -108,7 +109,7 @@
         <v-calendar
           ref="calendar"
           v-model="focus"
-          color="primary"
+          color="#0e7e8f"
           :events="events"
           :event-color="getEventColor"
           :event-margin-bottom="3"
@@ -277,7 +278,11 @@
       title () {
         const { start, end } = this
         if (!start || !end) {
-          return ''
+          var month_name = function(dt){
+            let mlist = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+              return mlist[dt.getMonth()];
+            };
+          return month_name(new Date()) + " " + new Date().getFullYear()
         }
 
         const startMonth = this.monthFormatter(start)

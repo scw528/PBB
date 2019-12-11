@@ -1,133 +1,77 @@
 <template>
   <div>
-    <v-row class="fill-width" align="center">
-      <v-img
-        :aspect-ratio="16/9"
-        src="../../assets/lisa_melt.jpg"
-        height="700px"
-        class="mb-6"
-        gradient="to top right, rgba(100,115,201,.33), rgba(46, 64, 87,0.3)"
-      >
-        <v-container class="fill-height">
-          <v-row justify="center" class="mt-12">
-            <v-btn outlined color="white"><strong>Start Your Journey</strong></v-btn>
-          </v-row>
-
-        </v-container>
-      </v-img>
-    </v-row>
-  
-    <v-row class="fill-height mt-4 mx-5" align="center">
-      <v-col class="mx-auto" :lg="7" :sm="12">
-        <h2 class="text-center my-3">ABOUT LISA</h2>
-        <p class="text-left">Lisa has been practicing Yoga since 1994, and initially began her practice as an outlet to deal with stress. However, Lisa quickly experienced that Yoga offered more as it opened her eyes to lifelong learning about the workings of the inner body and how it's subtleties affect mind/body balance. 
-                            <br>
-                            <br>
-                            Lisa’s journey as a Yoga teacher began in 2007 as a way to encourage others to sense and feel a body connection they hadn't experienced before. Always interested in the importance of connective tissue, Lisa was drawn to study MELT method as a way to understand the healing properties of the body and to help her students feel their bodies in a brand new way. By sharing with her student’s how to tap into the wisdom of the body, Lisa’s classes help students reap many benefits by learning how to experience immediate freedom in their bodies, both in their yoga practice and daily activities.
-                            <br>
-                            <br>
-                            Along with Lisa’s 20 plus years of practical experience, she has extensive training and qualifications to support her inner body, alignment-based and yin teachings. Lisa is a Level 3 Critical Alignment Therapist; Saskatoon's only authorized Level 2 MELT Method instructor; and has studied Yin with Patricia Dewar, Sarah Powers and Bernie Clark. Lisa holds a Yoga Alliance certificate as a 200 hour Experienced Registered Yoga Teacher (200 HR ERYT™). Lisa has also embarked on Energy Medicine Yoga teacher training to add to her repertoire of qualifications. Lisa is influenced and motivated by: Patria Dewar; Todd Jackson, Sue Hinzmann; Mary-Lou Weprin; and Father Joe Perira. 
-                            <br>
-                            <br>
-                            Lisa strives to share her passion and knowledge with her students, encouraging them to find lightness and freedom in their bodies, in an explorative way. Sharing MELT and Yoga, separately or in combination, brings whole-body benefits which is the heart of Lisa’s teaching.</p>
-      </v-col>
-
-      <v-col class="mx-auto" :lg="5" :sm="12">
-        <template>
-          <v-col>
-            <v-hover>
-              <v-card>
-                <v-img src="../../assets/lisa.jpg" height="500px"></v-img>
-              </v-card>
-            </v-hover>
-          </v-col>
-        </template>
-      </v-col>
-    </v-row>
-
-    <v-divider></v-divider>
-
-    <v-row class="fill-height my-3 mx-auto" align="center">
-
-      <v-col class="mx-auto" :lg="5" :sm="12">
-        <template>
-          <v-col>
-            <v-hover>
-              <v-card>
-                <v-img src="../../assets/yoga.jpg" height="500px"></v-img>
-              </v-card>
-            </v-hover>
-          </v-col>
-        </template>
-      </v-col>
-
-      <v-col class="mx-auto" :lg="7" :sm="12">
-        <h2 class="text-center">YOGA</h2>
-        <p class="text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </v-col>
-    </v-row>
-
-    <v-divider></v-divider>
-
-    <v-row class="fill-height my-3 mx-auto" align="center">
-      <v-col :lg="7" :sm="12">
-        <h2 color="#536271" class="text-center">MELT</h2>
-        <p class="text-left">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT. DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR. EXCEPTEUR SINT OCCAECAT CUPIDATAT NON PROIDENT, SUNT IN CULPA QUI OFFICIA DESERUNT MOLLIT ANIM ID EST LABORUM.</p>
-      </v-col>
-
-      <v-col class="mx-auto mb-5" :lg="5" :sm="12">
-        <template>
-          <v-col>
-              <v-card>
-                <v-img src="../../assets/melt.jpg" height="500px"></v-img>
-              </v-card>
-          </v-col>
-        </template>
-      </v-col>
-    </v-row>
-
-    <!-- <v-container class="pa-4 text-center">
-    <v-row class="fill-height" align="center">
-      <template v-for="(item, i) in cards">
-        <v-col
-          :key="i"
-          cols="12"
-          md="4"
+    <v-layout row wrap class="fill-width" align="center">
+      <v-flex xs12 md12 lg12>
+        <v-img
+          :aspect-ratio="16/9"
+          src="../../assets/lisa_melt.jpg"
+          max-height="700px"
+          min-height="500px"
+          gradient="to right, rgba(78, 81, 102,0), rgba(78, 81, 102,0.4)"
         >
-          <v-hover v-slot:default="{ hover }">
-            <v-card
-              :elevation="hover ? 12 : 2"
-              :class="{ 'on-hover': hover }"
-            >
-              <v-img
-                :src="item.src"
-                height="225px"
-                gradient="to top right, rgba(100,115,150,.33), rgba(25,32,50,.7)"
-              >
-                <v-card-title class="white--text">
-                  <v-row
-                    class="fill-height flex-column"
-                    justify="start"
-                  >
-                    <h4 class="mt-4 text-left">{{ item.title }}</h4>
-                    <br>
+          <!-- <v-container class="fill-height fill-width pa-0">
+            <v-flex xs6 md6 lg6 class="d-flex ma-auto">
+                <h1 class="d-flex ma-auto">Living Life Fully • Active & Pain Free</h1>
+                <v-btn outlined class="d-flex ma-auto" color="white">Join Newsletter</v-btn>
+            </v-flex>
+          </v-container> -->
+          <v-container class="fill-height pa-0 mr-0"> 
+            <v-row>
+              <v-col cols="11">
+                <v-row justify-lg="end" justify-sm="center" class="ma-sm-auto">
+                  <h1 class="d-flex" style="font-family: Rocketto; font-size: 46pt"> Living Life Fully • Active & Pain Free</h1>
+                </v-row>
+                <v-row justify="end">
+                  <v-btn outlined class="d-flex" color="#352344">Join Newsletter</v-btn>
+                </v-row>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-img>
+      </v-flex>
+    </v-layout>
 
-                    <div>
-                      <p class="caption font-weight-bold font-italic text-left">
-                        {{ item.text }}
-                      </p>
-                    </div>
-                  </v-row>
-                </v-card-title>
-              </v-img>
-            </v-card>
-          </v-hover>
-        </v-col>
-      </template>
-    </v-row>
-  </v-container> -->
+    <v-layout row wrap>
+      <v-flex xs12 md12 lg12>
+        <v-sheet color="white" height="100px">
+          <v-container class="fill-height fill-width py-0">
+              <h2 class="d-flex text-center ma-auto" style="color: #352344">FEEL BETTER LIVING IN YOUR BODY</h2>
+          </v-container>
+        </v-sheet>
+      </v-flex>
+    </v-layout>
 
-
+    <v-layout row wrap class="mx-4">
+      <v-flex xs12 md4 lg4
+        v-for="item in cards"
+        :key="item.title"
+      >
+        <v-hover v-slot:default="{ hover }">
+          <v-card :elevation="hover ? 12 : 2" tile class="mx-2 mb-4" router v-bind:to="item.link">
+            <v-img :src="item.src" :aspect-ratio="16/9">
+              <v-container class="fill-height">
+                <v-row justify="center" align="center" class="text-center">
+                  <v-sheet tile class="ma-auto" height="15%" width="90%" color="rgba(255, 255, 255, 0.75)">
+                      <v-container class="fill-height">
+                        <v-row>
+                          <v-col>
+                            <v-row justify="center" align="start">
+                              <h3 class="my-2" style="font-family: Rocketto; font-size: 28pt">{{ item.description }}</h3>
+                            </v-row>
+                            <v-row justify="center" align="end">
+                              <h2 class="my-2" style="font-size: 32px">{{item.title}}</h2>
+                            </v-row>
+                          </v-col>
+                        </v-row>
+                      </v-container>
+                  </v-sheet>
+                </v-row>
+              </v-container>
+            </v-img>
+          </v-card>
+        </v-hover>
+      </v-flex>
+    </v-layout>
   </div>
 </template>
 
@@ -136,9 +80,9 @@ export default {
   data() {
     return {
       cards: [
-        {title: "YOGA", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", src: require('../../assets/yoga.jpg'), link: '/yoga'},
-        {title: 'MELT', text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", src: require('../../assets/melt.jpg'), link: '/melt'},
-        {title: 'WORKSHOPS', text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", src: require('../../assets/workshop.jpg'), link: '/workshops'},
+        {title: "YOGA", description: "Sharing the wisdom of the practice.", src: require('../../assets/YOGA3.png'), link: '/yoga'},
+        {title: 'MELT', description: "Essential to any wellness or fitness routine.", src: require('../../assets/melt2.jpg'), link: '/melt'},
+        {title: 'WORKSHOPS', description: "Learn, inspire and advance your self-care.", src: require('../../assets/workshop.png'), link: '/workshops'},
       ]
     }
   }
@@ -151,17 +95,16 @@ export default {
   }
 
   .v-card:not(.on-hover) {
-    opacity: 0.85;
-  }
-
-  h1 {
-        font-size: 34pt;
-        color: white;
-        letter-spacing: 3px;
+    opacity: 0.9;
   }
 
   h2 {
-    color: #6761A8
+      letter-spacing: 3px;
+      color: #0e7e8f
+  }
+
+  h1 {
+    color: #ffffff
   }
 
 

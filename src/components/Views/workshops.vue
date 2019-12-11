@@ -3,7 +3,7 @@
         <v-row class="fill-width" align="center">
             <v-img
                 :aspect-ratio="16/9"
-                src="../../assets/workshop.jpg"
+                src="../../assets/workshop.png"
                 height="500px"
                 class="mb-6"
             >
